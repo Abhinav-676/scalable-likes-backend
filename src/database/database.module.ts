@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { Kysely, PostgresDialect } from 'kysely';
 import { Pool } from 'pg';
+import { DB } from './generated/db';
 
 @Module({
   providers: [
@@ -16,7 +17,7 @@ import { Pool } from 'pg';
           })
         })
 
-        const db = new Kysely<any>({
+        const db = new Kysely<DB>({
           dialect
         })
 
