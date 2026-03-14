@@ -407,6 +407,12 @@ export interface ExtensionsPgStatStatementsInfo {
   stats_reset: Timestamp | null;
 }
 
+export interface Likes {
+  id: Generated<string>;
+  likes: Generated<Int8>;
+  user_id: string;
+}
+
 export interface Pgmigrations {
   id: Generated<number>;
   name: string;
@@ -590,6 +596,7 @@ export interface DB {
   "auth.users": AuthUsers;
   "extensions.pg_stat_statements": ExtensionsPgStatStatements;
   "extensions.pg_stat_statements_info": ExtensionsPgStatStatementsInfo;
+  likes: Likes;
   pgmigrations: Pgmigrations;
   "realtime.messages": RealtimeMessages;
   "realtime.schema_migrations": RealtimeSchemaMigrations;
