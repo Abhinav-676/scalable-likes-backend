@@ -6,6 +6,8 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "migrate": "node-pg-migrate -f ./migration.config.json",
+    "gen:db": "kysely-codegen --out-file ./src/database/generated/db.d.ts --dialect postgres",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
@@ -21,8 +23,16 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.3",
     "@nestjs/core": "^11.0.1",
     "@nestjs/platform-express": "^11.0.1",
+    "@types/node-pg-migrate": "^2.3.1",
+    "@types/pg": "^8.18.0",
+    "dotenv": "^17.3.1",
+    "kysely": "^0.28.12",
+    "kysely-codegen": "^0.20.0",
+    "node-pg-migrate": "^8.0.4",
+    "pg": "^8.20.0",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },

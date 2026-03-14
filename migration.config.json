@@ -1,0 +1,13 @@
+{
+  "schema": "public",
+  "create-schema": false,
+  "migrations-dir": "./db/migrations",
+  "migrations-schema": "public",
+  "create-migrations-schema": false,
+  "migrations-table": "pgmigrations",
+  "migration-filename-format": "utc",
+  "migration-file-language": "ts",
+  "check-order": true,
+  "verbose": true,
+  "decamelize": false
+}
